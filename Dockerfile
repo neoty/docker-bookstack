@@ -14,7 +14,6 @@ RUN \
  apk add --no-cache  \
 	curl \
 	tar \
-#	memcached \
 	netcat-openbsd \
     php7-opcache \
 	php7-ctype \

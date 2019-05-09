@@ -9,6 +9,8 @@ LABEL maintainer="homerr"
 # package versions
 ARG BOOKSTACK_RELEASE
 
+RUN apk add --no-cache nodejs
+
 RUN \
  echo "**** install build packages ****" && \
  apk add --no-cache  \

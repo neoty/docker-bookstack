@@ -57,12 +57,12 @@ RUN \
 	/root/.composer \
 	/tmp/*
 
-RUN apk add nodejs nodejs-npm
-RUN npm install -g minify
-RUN minify /var/www/html/public/dist/styles.css > /var/www/html/public/dist/styles.minify.css
-RUN mv /var/www/html/public/dist/styles.minify.css /var/www/html/public/dist/styles.css
-RUN npm uninstall -g minify
-RUN apk del nodejs nodejs-npm
+#RUN apk add nodejs nodejs-npm
+#RUN npm install -g minify
+#RUN minify /var/www/html/public/dist/styles.css > /var/www/html/public/dist/styles.minify.css
+#RUN mv /var/www/html/public/dist/styles.minify.css /var/www/html/public/dist/styles.css
+#RUN npm uninstall -g minify
+#RUN apk del nodejs nodejs-npm
 # copy local files
 COPY root/ /
 

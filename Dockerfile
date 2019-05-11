@@ -42,8 +42,7 @@ RUN \
  fi && \
  curl -o \
  /tmp/bookstack.tar.gz -L \
-	"https://github.com/BookStackApp/BookStack/archive/v0.25.5.tar.gz" && \
-#"https://github.com/BookStackApp/BookStack/archive/${BOOKSTACK_RELEASE}.tar.gz" && \
+    "https://github.com/BookStackApp/BookStack/archive/${BOOKSTACK_RELEASE}.tar.gz" && \
  tar xf \
  /tmp/bookstack.tar.gz -C \
 	/var/www/html/ --strip-components=1 && \

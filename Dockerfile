@@ -1,7 +1,7 @@
 FROM lsiobase/nginx:3.9
 
 # set version label
-ARG 20190508
+ARG 20190511
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="homerr"
@@ -57,12 +57,12 @@ RUN \
 	/root/.composer \
 	/tmp/*
 
-#RUN apk add nodejs nodejs-npm
-#RUN npm install -g minify
-#RUN minify /var/www/html/public/dist/styles.css > /var/www/html/public/dist/styles.minify.css
-#RUN mv /var/www/html/public/dist/styles.minify.css /var/www/html/public/dist/styles.css
-#RUN npm uninstall -g minify
-#RUN apk del nodejs nodejs-npm
+RUN apk add nodejs nodejs-npm
+RUN npm install -g minify
+RUN minify /var/www/html/public/dist/styles.css > /var/www/html/public/dist/styles.minify.css
+RUN mv /var/www/html/public/dist/styles.minify.css /var/www/html/public/dist/styles.css
+RUN npm uninstall -g minify
+RUN apk del nodejs nodejs-npm
 # copy local files
 COPY root/ /
 

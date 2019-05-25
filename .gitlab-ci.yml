@@ -1,9 +1,9 @@
- image: docker:stable
+image: docker:stable
 
- before_script:
-   - docker info
+services:
+  - docker:dind
 
- build:
-   stage: build
-   script:
-     - docker build -t my-docker-image .
+build:
+  stage: build
+  script:
+    - docker build -t my-docker-image .

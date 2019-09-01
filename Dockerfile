@@ -57,7 +57,6 @@ RUN \
 	/root/.composer \
 	/tmp/*
 
-RUN cd /var/www/html && php artisan migrate
 RUN apk add nodejs nodejs-npm
 RUN npm install -g minify
 RUN minify /var/www/html/public/dist/styles.css > /var/www/html/public/dist/styles.minify.css

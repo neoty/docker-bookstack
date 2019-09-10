@@ -1,7 +1,7 @@
 FROM lsiobase/nginx:3.9
 
 # set version label
-ARG 20190906
+ARG 0.27.4
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="homerr"

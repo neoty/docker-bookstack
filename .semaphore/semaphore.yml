@@ -5,10 +5,10 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: build
+  - name: docker
     task:
       jobs:
-        - name: Docker build
+        - name: Docker build and push
           commands:
             - checkout
             - docker build -t neoty/docker-bookstack .
@@ -25,3 +25,5 @@ blocks:
         on_pass:
           commands:
             - 'docker push neoty/docker-bookstack:latest'
+    skip:
+      when: branch != 'master'

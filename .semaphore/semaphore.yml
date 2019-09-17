@@ -24,4 +24,4 @@ blocks:
       epilogue:
         on_pass:
           commands:
-            - docker push neoty/docker-bookstack
+            - 'docker push neoty/docker-bookstack:latest'

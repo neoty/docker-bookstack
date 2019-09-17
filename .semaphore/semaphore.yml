@@ -11,7 +11,7 @@ blocks:
         - name: Docker build and push
           commands:
             - checkout
-            - docker build -t neoty/docker-bookstack .
+            - docker build -t neoty/docker_bookstack .
             - docker images
       secrets:
         - name: DOCKER-HUB
@@ -24,6 +24,6 @@ blocks:
       epilogue:
         on_pass:
           commands:
-            - 'docker push neoty/docker-bookstack:latest'
+            - 'docker push neoty/docker_bookstack:latest'
     skip:
       when: branch != 'master'
